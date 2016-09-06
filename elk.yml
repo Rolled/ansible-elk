@@ -4,9 +4,6 @@
 #
 
 - hosts: elk
-  user: thomas.jackson
-  become_method: sudo
-  become_user: root
   roles:
     - { role: elasticsearch }
     - { role: fluentd, when: (logging_backend == 'fluentd') }
