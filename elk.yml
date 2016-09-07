@@ -3,7 +3,7 @@
 # Playbook to install the ELK stack
 #
 
-- hosts: elk
+- hosts: Elk-Servers
   roles:
     - { role: elasticsearch }
     - { role: fluentd, when: (logging_backend == 'fluentd') }
